@@ -8,12 +8,12 @@ class Bar extends Component{
 
             <Container >
               <Row >
-                 <Col>
+                 <Col className="bar">
                       <span className="red" >Want to see our group's daily trades?  
                           TEXT 'Daily' to <a href="SMS:385-448-4055"> 385-448-4055</a></span>
                  </Col>
               </Row>
-                <Row className="bar">
+                <Row >
                     <Col lg="8">
                         <YouTube
                             videoId="5k1GStCxq7c"
@@ -23,10 +23,10 @@ class Bar extends Component{
 
                     <Col lg="3">
 
-                        <h1>Schedule My Preview</h1>
+                        <h1 className="lightbg">Schedule My Preview</h1>
 
 
-                        <div className="embedded-joinwebinar-button">
+                        <div className="embedded-joinwebinar-button" >
                                 <Button type="button" className="btn btn-default css3button" title="regpopbox_38575_16331f919f">
                                     <span>Register now</span>
                                 </Button>

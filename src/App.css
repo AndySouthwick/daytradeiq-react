@@ -70,6 +70,15 @@ a {
   justify-content: center!important;
 }
 
+.red{
+  background-color: #333333;
+  color: red;
+}
+.lightbg{
+  background-color: rgba(247, 247, 247, 0.83);
+  padding: .3em;
+
+}
 .bar2{
   background-color: #171B1F;
   padding: 5px;
@@ -104,7 +113,9 @@ text-align: center;
   line-height: 40px;
   font-weight: bold;
 }
-
+.bar3 img {
+  border-radius: 50%;
+}
 .footer {
   background-color: #181818;
   padding: 10px;
