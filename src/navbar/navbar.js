@@ -20,13 +20,13 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
     render() {
         return (
             <div>
-                <Navbar color="faded" light toggleable>
+                <Navbar  light toggleable className="navbar navbar-toggleable-md navbar-light my_bg-faded fixed-top">
                     <NavbarToggler right onClick={this.toggle} />
-                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarBrand href="/"><img src="img/dayTradeIq.png" alt="" width="200"/></NavbarBrand>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
+                                <NavLink href="#">Contact Us</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>

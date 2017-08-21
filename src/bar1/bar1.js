@@ -5,12 +5,15 @@ import {Container, Col, Row, Card, CardImg, CardText, CardBlock,
 class Bar1 extends Component{
     render(){
         return(
-            <Container>
-                <Row fluid>
+            <Container fluid className="bar1">
+                <Row className="justify-content-center">
+                    <Col><h1>Frequently Asked Questions </h1><hr/>
+                    </Col></Row>
+                <Row >
                     <Col>
                         <div>
                             <Card>
-                                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                                <CardImg top width="100%" src="img/forex.jpeg" alt="Card image cap" />
                                 <CardBlock>
                                     <CardTitle>Card title</CardTitle>
                                     <CardSubtitle>Card subtitle</CardSubtitle>
@@ -24,7 +27,7 @@ class Bar1 extends Component{
                     <Col>
                         <div>
                             <Card>
-                                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                                <CardImg top width="100%" src="img/students.jpeg" alt="Card image cap" />
                                 <CardBlock>
                                     <CardTitle>Card title</CardTitle>
                                     <CardSubtitle>Card subtitle</CardSubtitle>
@@ -38,7 +41,7 @@ class Bar1 extends Component{
                         <Col>
                             <div>
                                 <Card>
-                                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                                    <CardImg top width="100%" src="img/support.jpeg" alt="Card image cap" />
                                     <CardBlock>
                                         <CardTitle>Card title</CardTitle>
                                         <CardSubtitle>Card subtitle</CardSubtitle>
@@ -52,7 +55,7 @@ class Bar1 extends Component{
                             <Col>
                                 <div>
                                     <Card>
-                                        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                                        <CardImg top width="100%" src="img/tradefulltime.jpeg" alt="Card image cap" />
                                         <CardBlock>
                                             <CardTitle>Card title</CardTitle>
                                             <CardSubtitle>Card subtitle</CardSubtitle>
