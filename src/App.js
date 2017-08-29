@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Container} from 'reactstrap'
 import Navigation from './navbar/navbar'
 import {} from './jumbotron/jumbotron'
 import Jumbotron from "./jumbotron/jumbotron";
@@ -13,6 +11,7 @@ import Footer from './footer/footer'
 
 
 class App extends Component {
+
   render() {
     return (
       <div>

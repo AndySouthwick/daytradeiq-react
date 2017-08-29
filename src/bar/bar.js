@@ -1,8 +1,35 @@
 import React, {Component} from 'react'
-import {Container, Row, Col, Button} from 'reactstrap'
+import {Container, Row, Col, Form, FormGroup, Input, Button} from 'reactstrap'
 import YouTube from 'react-youtube'
+import { createNewContact } from '../graph.js'
+import { graphql } from 'react-apollo'
 
 class Bar extends Component{
+  constructor () {
+    super()
+    this.state = {
+      affiliate_id: '',
+      given_name: '',
+      family_name: '',
+      email: '',
+      phone: ''
+    }
+  }
+
+  addContact = (evt) => {
+    console.log(this.state.given_name)
+    evt.preventDefault()
+    this.props.mutate({
+      variables: {
+        affiliate_id: 1,
+        given_name: this.state.given_name,
+        family_name: this.state.family_name,
+        email: this.state.email,
+        phone: this.state.phone
+      }
+    })
+  }
+
     render(){
         return(
 
@@ -26,11 +53,21 @@ class Bar extends Component{
                         <h1 className="lightbg">Schedule My Preview</h1>
 
 
-                        <div className="embedded-joinwebinar-button" >
-                                <Button type="button" className="btn btn-default css3button" title="regpopbox_38575_16331f919f">
-                                    <span>Register now</span>
-                                </Button>
-                        </div>
+                      <Form onSubmit={this.addContact}>
+                        <FormGroup >
+                          <Input type="text" onChange={(evt) => this.setState({ given_name: evt.target.value }) } placeholder="First Name" />
+                        </FormGroup>
+                        <FormGroup>
+                          <Input type="text" onChange={(evt) => this.setState({ family_name: evt.target.value }) } placeholder="Last Name" />
+                        </FormGroup>
+                        <FormGroup>
+                          <Input type="text" onChange={(evt) => this.setState({ email: evt.target.value }) } placeholder="Email" />
+                        </FormGroup>
+                        <FormGroup>
+                          <Input type="text" onChange={(evt) => this.setState({ phone: evt.target.value }) } placeholder="Phone" />
+                        </FormGroup>
+                        <Button type="submit">Submit</Button>
+                      </Form>
 
 
                     </Col>
@@ -44,4 +81,4 @@ class Bar extends Component{
         event.target.pauseVideo();
     }
 }
-export default Bar
+export default graphql(createNewContact)(Bar)
