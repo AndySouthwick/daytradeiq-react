@@ -27,14 +27,18 @@ f
                 email: this.state.email,
                 phone: this.state.phone
             }
+        }).then((res) => {
+          if(res){
+            return <Redirect to="/thankyou"/>
+          }
         })
     }
 
 
     render(){
         return(
-            <Form>
-                <FormGroup onSubmit={this.addContact}>
+            <Form onSubmit={this.addContact}>
+                <FormGroup >
                     <Input type="text" onChange={(evt) => this.setState({ given_name: evt.target.value }) } placeholder="First Name" />
                 </FormGroup>
                 <FormGroup>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Container, Row, Col} from 'reactstrap'
+import Copyright from 'react-copyright'
 
 class Footer extends Component{
     render(){
@@ -9,7 +10,7 @@ class Footer extends Component{
 
                     <hr/>
                     <Col>
-                        <h4>DayTradeIq</h4>
+                        <h4>AscendEquities</h4>
                     </Col>
                     <Col>
                         <h4>Solutions</h4>
@@ -25,18 +26,16 @@ class Footer extends Component{
                         <a href="/#aboutsection">About</a><br/>
 
                         <a href="/contact-us">Office Location</a><br/>
+                        <a href="/#Affiliate">Afilliate Program</a><br/>
                     </Col>
-                    <Col>
-                        <a href="https://www.facebook.com/winatdaytrading/" target="blank"><i className="fa fa-facebook fa-4x" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/winatdaytrading"><i className="fa fa-twitter fa-4x" aria-hidden="true"></i></a>
-                        <a href="https://www.youtube.com/channel/UCvBSK3dY0_kG4HMZ4dKycGQ/featured" target="blank"><i className="fa fa-youtube fa-4x" aria-hidden="true"></i></a>
-                    </Col>
+
 
                 </Row>
 
                 <Row>
                     <Col>
-                        copy 2017 daytradeiq.com All Rights Reserved
+
+                        <p className="my-center"><Copyright>daytradeiq.com All Rights Reserved</Copyright></p>
                     </Col>
                 </Row>
             </Container>

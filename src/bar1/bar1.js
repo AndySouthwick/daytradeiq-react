@@ -1,71 +1,57 @@
 import React, {Component} from 'react'
 import {Container, Col, Row, Card, CardImg, CardText, CardBlock,
-    CardTitle, CardSubtitle, Button} from 'reactstrap'
+    CardTitle, CardSubtitle, Button, Modal, ModalHeader, ModalBody} from 'reactstrap'
+import Card1 from './cards/card1'
+import Card2  from './cards/card2'
+import Card3  from './cards/card3'
+import Card4 from './cards/card4'
 
 class Bar1 extends Component{
-    render(){
+
+  render(){
+
+
+
+
         return(
             <Container fluid className="bar1">
+
+
                 <Row className="justify-content-center">
                     <Col><h1>Frequently Asked Questions </h1><hr/>
-                    </Col></Row>
-                <Row >
-                    <Col>
-                        <div>
-                            <Card>
-                                <CardImg top width="100%" src="img/forex.jpeg" alt="Card image cap" />
-                                <CardBlock>
-                                    <CardTitle>Card title</CardTitle>
-                                    <CardSubtitle>Card subtitle</CardSubtitle>
-                                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                    <Button>Button</Button>
-                                </CardBlock>
-                            </Card>
-                        </div>
                     </Col>
-
-                    <Col>
-                        <div>
-                            <Card>
-                                <CardImg top width="100%" src="img/students.jpeg" alt="Card image cap" />
-                                <CardBlock>
-                                    <CardTitle>Card title</CardTitle>
-                                    <CardSubtitle>Card subtitle</CardSubtitle>
-                                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                    <Button>Button</Button>
-                                </CardBlock>
-                            </Card>
-                        </div>
-                    </Col>
-
-                        <Col>
-                            <div>
-                                <Card>
-                                    <CardImg top width="100%" src="img/support.jpeg" alt="Card image cap" />
-                                    <CardBlock>
-                                        <CardTitle>Card title</CardTitle>
-                                        <CardSubtitle>Card subtitle</CardSubtitle>
-                                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                        <Button>Button</Button>
-                                    </CardBlock>
-                                </Card>
-                            </div>
-                        </Col>
-
-                            <Col>
-                                <div>
-                                    <Card>
-                                        <CardImg top width="100%" src="img/tradefulltime.jpeg" alt="Card image cap" />
-                                        <CardBlock>
-                                            <CardTitle>Card title</CardTitle>
-                                            <CardSubtitle>Card subtitle</CardSubtitle>
-                                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                            <Button>Button</Button>
-                                        </CardBlock>
-                                    </Card>
-                                </div>
-                            </Col>
                 </Row>
+                <Row >
+                  <Col>
+                    <div>
+                         <Card1/>
+                    </div>
+                  </Col>
+
+                  <Col>
+                    <div>
+                      <Card2/>
+                    </div>
+                  </Col>
+
+
+                  <Col>
+                    <div>
+                      <Card3/>
+                    </div>
+                  </Col>
+
+                  <Col>
+                      <div>
+                        <Card4/>
+                      </div>
+                  </Col>
+                </Row>
+
+
+
+
+
             </Container>
         )
     }

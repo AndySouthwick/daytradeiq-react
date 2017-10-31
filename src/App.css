@@ -117,6 +117,32 @@ text-align: center;
 }
 .footer {
   background-color: #181818;
-  padding: 10px;
   color: white;
+  padding-top: 5em;
+  height: 25em;
+}
+.middle{
+  margin-top: 25em;
+}
+
+.myFlexContainer{
+  display:flex;
+  align-content: center;
+}
+.myFlexItem{
+  align-content: center;
+}
+.mymargin{
+  margin-bottom: 2em;
+}
+.youTubeVideo{
+  margin-top: 10em;
+  margin-bottom: 8em;
+  width: 100%;
+}
+@media  (min-width:1025px){
+  .youTubeVideo{
+    width: 750px;
+    height: 550px;
+  }
 }

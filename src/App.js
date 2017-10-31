@@ -1,31 +1,20 @@
-import React, { Component } from 'react';
-import './App.css';
-import Navigation from './navbar/navbar'
-import {} from './jumbotron/jumbotron'
-import Jumbotron from "./jumbotron/jumbotron";
-import Bar from './bar/bar'
-import Bar1 from './bar1/bar1'
-import Bar2 from './bar2/bar2'
-import Bar3 from './bar3/bar3'
-import Footer from './footer/footer'
 
+import React, { Component } from 'react'
+
+import { Switch, Route, Redirect } from 'react-router-dom'
+
+import Landing from './landing/landing'
+import ThankYou from './thankyou/thankyou'
 
 class App extends Component {
-
-  render() {
+  render () {
     return (
-      <div>
-      <Navigation />
-          <Jumbotron/>
-          <Bar/>
-          <Bar1/>
-          <Bar2/>
-          <Bar3/>
-          <Footer/>
-      </div>
-
-    );
+      <Switch>
+        <Route exact path="/" component={Landing}/>
+        <Route exact path="/thankyou" component={ThankYou}/>
+      </Switch>
+    )
   }
 }
 
-export default App;
+export default App

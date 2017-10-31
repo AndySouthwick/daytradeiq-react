@@ -3,6 +3,7 @@ import {Container, Row, Col, Form, FormGroup, Input, Button} from 'reactstrap'
 import YouTube from 'react-youtube'
 import { createNewContact } from '../graph.js'
 import { graphql } from 'react-apollo'
+import { Redirect } from 'react-router-dom'
 
 class Bar extends Component{
   constructor () {
@@ -12,7 +13,8 @@ class Bar extends Component{
       given_name: '',
       family_name: '',
       email: '',
-      phone: ''
+      phone: '',
+      redirect: false
     }
   }
 
@@ -27,50 +29,34 @@ class Bar extends Component{
         email: this.state.email,
         phone: this.state.phone
       }
+    }).then(() => {
+      this.setState({
+        redirect: true
+      })
+      console.log(this.state)
+
     })
+
   }
 
     render(){
+
+      if (this.state.redirect) {
+        return <Redirect to='/thankyou'/>;
+      }
         return(
 
             <Container >
-              <Row >
-                 <Col className="bar">
-                      <span className="red" >Want to see our group's daily trades?  
-                          TEXT 'Daily' to <a href="SMS:385-448-4055"> 385-448-4055</a></span>
-                 </Col>
-              </Row>
                 <Row >
-                    <Col lg="8">
+                    <Col lg={{size:8, offset:2}}>
                         <YouTube
+                            className="youTubeVideo"
                             videoId="5k1GStCxq7c"
                             onReady={this._onReady}
-                        />
+                           />
                     </Col>
 
-                    <Col lg="3">
 
-                        <h1 className="lightbg">Schedule My Preview</h1>
-
-
-                      <Form onSubmit={this.addContact}>
-                        <FormGroup >
-                          <Input type="text" onChange={(evt) => this.setState({ given_name: evt.target.value }) } placeholder="First Name" />
-                        </FormGroup>
-                        <FormGroup>
-                          <Input type="text" onChange={(evt) => this.setState({ family_name: evt.target.value }) } placeholder="Last Name" />
-                        </FormGroup>
-                        <FormGroup>
-                          <Input type="text" onChange={(evt) => this.setState({ email: evt.target.value }) } placeholder="Email" />
-                        </FormGroup>
-                        <FormGroup>
-                          <Input type="text" onChange={(evt) => this.setState({ phone: evt.target.value }) } placeholder="Phone" />
-                        </FormGroup>
-                        <Button type="submit">Submit</Button>
-                      </Form>
-
-
-                    </Col>
 
                 </Row>
             </Container>
