@@ -35,7 +35,7 @@ class Footer extends Component{
                 <Row>
                     <Col>
 
-                        <p className="my-center"><Copyright>daytradeiq.com All Rights Reserved</Copyright></p>
+                        <p className="my-center"><Copyright>ascendequities.com All Rights Reserved</Copyright></p>
                     </Col>
                 </Row>
             </Container>
