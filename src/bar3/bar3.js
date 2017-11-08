@@ -11,7 +11,7 @@ class Bar3 extends Component{
                     <hr/>
                     <Col className="my-center">
                         <img src="img/josh.jpg" alt=""/>
-                        <h2>Josh Bingham</h2>
+                        <h2>Jossssh Bingham</h2>
                         <i>Tucson Arizona</i>
                         "Learn the indicators. If you do, you'll never have to worry about money."
                     </Col>
